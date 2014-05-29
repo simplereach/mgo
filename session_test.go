@@ -29,8 +29,8 @@ package mgo_test
 import (
 	"flag"
 	"fmt"
-	"labix.org/v2/mgo"
-	"labix.org/v2/mgo/bson"
+	"github.com/simplereach/mgo"
+	"github.com/simplereach/mgo/bson"
 	. "launchpad.net/gocheck"
 	"math"
 	"reflect"

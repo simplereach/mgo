@@ -28,7 +28,7 @@ package mgo_test
 
 import (
 	"fmt"
-	"labix.org/v2/mgo"
+	"github.com/simplereach/mgo"
 	. "launchpad.net/gocheck"
 	"sync"
 	"time"

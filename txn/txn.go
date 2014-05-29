@@ -9,8 +9,8 @@ package txn
 import (
 	"encoding/binary"
 	"fmt"
-	"labix.org/v2/mgo"
-	"labix.org/v2/mgo/bson"
+	"github.com/simplereach/mgo"
+	"github.com/simplereach/mgo/bson"
 	"reflect"
 	"sort"
 	"sync"
@@ -27,7 +27,7 @@ const (
 	taborting  state = 3 // Assertions failed, cleaning up
 	tapplying  state = 4 // Changes are in progress
 	taborted   state = 5 // Pre-conditions failed, nothing done
-	tapplied   state = 6 // All changes applied 
+	tapplied   state = 6 // All changes applied
 )
 
 func (s state) String() string {
@@ -159,7 +159,7 @@ type Op struct {
 	// intended by the operation. At most one of them may be set
 	// per operation. If none are set, Assert must be set and the
 	// operation becomes a read-only test.
-	// 
+	//
 	// Insert holds the document to be inserted at the time the
 	// transaction is applied. The Id field will be inserted
 	// into the document automatically as its _id field. The

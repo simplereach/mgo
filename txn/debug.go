@@ -3,7 +3,7 @@ package txn
 import (
 	"bytes"
 	"fmt"
-	"labix.org/v2/mgo/bson"
+	"github.com/simplereach/mgo/bson"
 	"sort"
 	"sync/atomic"
 )

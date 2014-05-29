@@ -1,9 +1,9 @@
 package txn_test
 
 import (
-	"labix.org/v2/mgo"
-	"labix.org/v2/mgo/bson"
-	"labix.org/v2/mgo/txn"
+	"github.com/simplereach/mgo"
+	"github.com/simplereach/mgo/bson"
+	"github.com/simplereach/mgo/txn"
 	. "launchpad.net/gocheck"
 	"testing"
 )
@@ -39,8 +39,8 @@ func (s *S) SetUpTest(c *C) {
 }
 
 type Account struct {
-	Id       int `bson:"_id"`
-	Balance  int
+	Id      int `bson:"_id"`
+	Balance int
 }
 
 func (s *S) TestDocExists(c *C) {

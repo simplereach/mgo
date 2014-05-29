@@ -31,7 +31,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"labix.org/v2/mgo/bson"
+	"github.com/simplereach/mgo/bson"
 	"math"
 	"net"
 	"reflect"
@@ -173,7 +173,7 @@ const defaultPrefetch = 0.25
 //     http://www.mongodb.org/display/DOCS/Connections
 //
 func Dial(url string) (*Session, error) {
-	session, err := DialWithTimeout(url, 10 * time.Second)
+	session, err := DialWithTimeout(url, 10*time.Second)
 	if err == nil {
 		session.SetSyncTimeout(1 * time.Minute)
 		session.SetSocketTimeout(1 * time.Minute)
